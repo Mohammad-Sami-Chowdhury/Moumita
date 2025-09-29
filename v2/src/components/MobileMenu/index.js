@@ -22,8 +22,8 @@ export default class MobileMenu extends Component {
   };
 
   handleLogout = () => {
+    window.location.href = "http://localhost:5173/";
     localStorage.removeItem("isAuthenticated");
-    window.location.reload();
   };
 
   render() {

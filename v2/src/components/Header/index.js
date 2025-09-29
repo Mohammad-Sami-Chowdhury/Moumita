@@ -30,8 +30,8 @@ const Header = () => {
   };
 
   const handleLogout = () => {
+    window.location.href = "http://localhost:5173/";
     localStorage.removeItem("isAuthenticated");
-    window.location.reload();
   };
 
   return (
@@ -48,12 +48,13 @@ const Header = () => {
             </div>
             <div className="col-lg-9">
               <div className="header-menu d-lg-block d-none">
-                <ul className="mobail-menu d-flex" ref={navRef} style={{ position: "relative" }}>
+                <ul
+                  className="mobail-menu d-flex"
+                  ref={navRef}
+                  style={{ position: "relative" }}
+                >
                   {/* Animated indicator */}
-                  <span
-                    className="nav-indicator"
-                    style={indicatorStyle}
-                  />
+                  <span className="nav-indicator" style={indicatorStyle} />
                   {navLinks.map((item) => (
                     <li key={item.href}>
                       <AnchorLink
@@ -72,7 +73,10 @@ const Header = () => {
                       onMouseLeave={handleLeave}
                       onClick={handleLogout}
                     >
-                      <i className="fa fa-sign-out" style={{ marginRight: "8px" }}></i>
+                      <i
+                        className="fa fa-sign-out"
+                        style={{ marginRight: "8px" }}
+                      ></i>
                       Logout
                     </button>
                   </li>
