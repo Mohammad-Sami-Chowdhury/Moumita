@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Great+Vibes&display=swap');
+
+.header ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    align-items: center;
+}
+.header ul li {
+    position: relative;
+}
+.header {
+    background: rgba(0,0,0,.12);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+}
+.header ul li a{
+    display: block;
+    padding: 35px 25px;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.header ul li a:hover{
+    color:#b6e9ff;
+    border-radius: 20%;
+    padding: 15px 20px;
+}
+.logo{
+    margin-top: 30px;
+}
+
+.logo h2 a{
+    color: #fff;
+    font-family: "Great Vibes", cursive;
+}
+.logout-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 600;
+    border-radius: 20%;
+    display: block;
+    text-transform: uppercase;
+}
+.logout-btn:hover {
+    color: #b6e9ff;
+}
+
+@media(max-width:991px){
+    .logo {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}

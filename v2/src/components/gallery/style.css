@@ -1,0 +1,22 @@
+.Gallery-section {
+  background: rgba(178, 201, 211, 0.1);
+}
+.gallery-img {
+  cursor: pointer;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 5%;
+}
+.thumbnail {
+  transform: scale(1);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.gallery-img:hover .thumbnail {
+  transform: scale(1.1);
+}
+
+.image-box img {
+  object-fit: cover;
+}
+
