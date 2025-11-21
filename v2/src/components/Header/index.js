@@ -29,11 +29,6 @@ const Header = () => {
     setIndicatorStyle({ opacity: 0 });
   };
 
-  const handleLogout = () => {
-    window.location.href = "http://localhost:5173/";
-    localStorage.removeItem("isAuthenticated");
-  };
-
   return (
     <div className="Header_root">
       <div className="header">
@@ -66,20 +61,6 @@ const Header = () => {
                       </AnchorLink>
                     </li>
                   ))}
-                  <li>
-                    <button
-                      className="logout-btn"
-                      onMouseEnter={handleHover}
-                      onMouseLeave={handleLeave}
-                      onClick={handleLogout}
-                    >
-                      <i
-                        className="fa fa-sign-out"
-                        style={{ marginRight: "8px" }}
-                      ></i>
-                      Logout
-                    </button>
-                  </li>
                 </ul>
               </div>
             </div>

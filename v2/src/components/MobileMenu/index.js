@@ -21,11 +21,6 @@ export default class MobileMenu extends Component {
     });
   };
 
-  handleLogout = () => {
-    window.location.href = "http://localhost:5173/";
-    localStorage.removeItem("isAuthenticated");
-  };
-
   render() {
     const { isMenuShow, isOpen } = this.state;
 
@@ -57,31 +52,6 @@ export default class MobileMenu extends Component {
               <AnchorLink href="#gallery" onClick={this.menuHandler}>
                 Gallery
               </AnchorLink>
-            </li>
-            <li>
-              <button
-                className="logout-btn"
-                onClick={() => {
-                  this.handleLogout();
-                  this.menuHandler();
-                }}
-                style={{
-                  width: "80%",
-                  padding: "12px 0",
-                  background: "#b6e9ff",
-                  color: "#111",
-                  border: "none",
-                  borderRadius: "20px",
-                  fontWeight: 600,
-                  fontSize: "16px",
-                  marginTop: "10px",
-                  cursor: "pointer",
-                  margin: "20px auto",
-                }}
-              >
-                <i className="fa fa-sign-out"></i>
-                Logout
-              </button>
             </li>
           </ul>
         </div>

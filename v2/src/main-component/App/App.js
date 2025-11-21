@@ -24,36 +24,11 @@ function App() {
     }
   };
 
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    setPin("");
-    localStorage.removeItem("isAuthenticated");
-  };
-
   return (
     <>
-      <Toaster />
-      {!isAuthenticated ? (
-        <div className="pin-page-bg">
-          <form onSubmit={handleLogin} className="pin-card">
-            <h2>Enter Pin to Access</h2>
-            <input
-              type="password"
-              value={pin}
-              onChange={(e) => setPin(e.target.value)}
-              placeholder="Enter PIN"
-              className="pin-input"
-              autoFocus
-            />
-            <button type="submit" className="pin-login-btn">Login</button>
-          </form>
-        </div>
-      ) : (
         <div>
-          <button onClick={handleLogout} style={{ position: "absolute", top: 10, right: 10 }}>Logout</button>
           <AllRoute />
         </div>
-      )}
     </>
   );
 }
