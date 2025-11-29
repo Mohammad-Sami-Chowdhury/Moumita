@@ -7,7 +7,7 @@ import PageThree from "./pages/PageThree";
 
 const router = createBrowserRouter([
   {
-    path: "/page-one",
+    path: "/",
     element: <PageOne />,
   },
   {
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <PageTwo />,
   },
   {
-    path: "/",
+    path: "/page-four",
     element: <Countdown />,
   },
   {
